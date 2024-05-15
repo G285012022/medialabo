@@ -1,3 +1,75 @@
+@charset "utf-2";
 body {
-    background-color:  gold;
+    background: white;
+    animation: bgchange 20s ease;
+    infinite;
 }
+@keyframes bgchange{
+    10%   {background:gold(243, 224, 120);}
+    20%  {background:rgb(182, 240, 120);}
+    30%  {background:rgb(12, 167, 120);}
+    40%  {background:rgb(27, 194, 120);}
+    50%  {background:rgb(39, 122, 120);}
+    60%  {background:rgb(85, 85, 120);}
+    70%  {background:rgb(169, 15, 120);}
+    80%  {background:rgb(212, 17, 120);}
+    90%  {background:rgb(231, 53, 120);}
+    100%  {background:rgb(230, 137, 120);}
+}
+
+
+
+p{
+    font-family:Arial;
+}
+
+h1 {
+    font-family:Arial;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    color: #fff;
+    position: relative;
+    
+}
+
+
+h1:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 100%;
+    background: #2eabe9;
+    transform: skew(-10deg);
+    z-index: -1;
+
+}
+
+h2{
+    font-family:Arial;
+}
+
+
+h3 {
+	font-weight: bold;
+	font-family:Arial;
+	color:#3f3faf;
+	margin: 5px;
+	background: linear-gradient(.25turn, white, 35%, #2eabe9)
+}
+
+div#zentai {
+	display: grid;
+	grid-template-columns:1fr 1fr;
+	height: 200px;
+	grid-gap: 10px;
+}
+
+div#zentai > div {
+	margin-left: 5px;
+	background-color: #2eabe9;
+}
+
+
+  
