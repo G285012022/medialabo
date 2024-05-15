@@ -2,7 +2,6 @@
 body {
     background: white;
     animation: bgchange 20s ease;
-    infinite;
 }
 @keyframes bgchange{
     10%   {background:gold(243, 224, 120);}
