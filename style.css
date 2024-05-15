@@ -1,4 +1,4 @@
-@charset "utf-2";
+@charset "utf-8";
 body {
     background: white;
     animation: bgchange 20s ease;
