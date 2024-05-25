@@ -38,7 +38,7 @@ phototable.insertAdjacentElement('beforeend', p1);  //div#phototable の中の�
 let imgjiro = document.createElement('img');        //img要素を作成
 imgjiro.setAttribute('src', 'jiro.png');            //img要素のsrc属性を設定
 let p2 = document.createElement('p');               //p要素を作成                               
-p2.insertAdjacentElement('beforeend', imggiro);     //p要素の中の最後に img 要素を追加
+p2.insertAdjacentElement('beforeend', imgjiro);     //p要素の中の最後に img 要素を追加
 phototable.insertAdjacentElement('beforeend', p2);  //div#phototable の中の最後に p 要素を追加
 
 let imghanako = document.createElement('img');      //img要素を作成
@@ -49,8 +49,6 @@ phototable.insertAdjacentElement('beforeend', p3);  //div#phototable の中の�
 
 
 // 練習4-4 箇条書き削除プログラム
-
-
 
 let loc = document.querySelectorAll('ul#location > li');
 for (let liElement of loc) {
