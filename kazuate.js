@@ -11,50 +11,51 @@ let kaisu = 0;
 hantei();
 
 
-function hantei() {
-  // 将来ここでは 4 ではなくテキストボックスに指定された数値を yoso に代入する
-  let yoso = 4;
-  kaisu++;
-  let resultMessage = kaisu + '回目の予想 ' + yoso + '<br>'; 
-}
+
+
+
+let spn = document.querySelector('span#kaisu');       //span#kaisu要素を検索
+spn.textContent = kaisu;                              // 要素のテキストを設定
+
+
 
 // ボタンを押した後の処理をする関数 hantei() の定義
 function hantei() {
   // 将来ここでは 4 ではなくテキストボックスに指定された数値を yoso に代入する
   let yoso = 4;
+
+  let ans = document.querySelector('span#answer');
+  ans.textContent = yoso;
+
   kaisu++;
   let resultMessage = kaisu + '回目の予想 ' + yoso + '<br>'; 
   // 課題3-1: 正解判定する
   // kotae と yoso が一致するかどうか調べて結果を出力
   // 課題3-1における出力先はコンソール
-
-
   
-  if (yoso === kotae) {
-    if(kaisu === 1){
-      console.log('正解です！おめでとう！');
+  let res = document.querySelector('p#result'); // p#result 要素を検索
+  let mes = '';
+
+if (yoso === kotae) {
+    if (kaisu === 1) {
+        mes = '正解です！おめでとう！';
+    } else {
+        mes = '答えは ' + kotae + ' でした．すでにゲームは終わっています';
     }
-    else{
-      console.log('答えは ' + kotae + ' でした．すでにゲームは終わっています');
-    }
-  }
-  else {
+} else {
     if (kaisu === 3) {
-      console.log('まちがい．残念でした答えは ' + kotae + ' です．');
+        mes = 'まちがい．残念でした答えは ' + kotae + ' です．';
+    } else if (kaisu >= 4) {
+        mes = '答えは ' + kotae + ' でした．すでにゲームは終わっています';
+    } else {
+        if (yoso < kotae) {
+            mes = 'まちがい．答えはもっと大きいですよ';
+        } else {
+            mes = 'まちがい．答えはもっと小さいですよ';
+        }
     }
-    else if (kaisu >= 4) {
-      console.log('答えは ' + kotae + ' でした．すでにゲームは終わっています');
-    }
-    else {
-      if (yoso < kotae) {
-        console.log('まちがい．答えはもっと大きいですよ');
-      } 
-      else {
-        console.log('まちがい．答えはもっと小さいですよ');
-      }if (kaisu >= 4) {
-        console.log('答えは ' + kotae + ' でした．すでにゲームは終わっています');
-      }
-    }
-  }
 }
-resultElement.innerHTML += resultMessage + '<br>';
+
+console.log(mes);
+res.textContent = mes;
+}
