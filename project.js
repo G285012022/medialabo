@@ -83,28 +83,54 @@ let data = {
 const programList = data.list.g1;
 
 // 各番組の情報をコンソールに出力
-console.log("番組 1:");
-console.log("番組ID: " + programList[0].id);
-console.log("イベントID: " + programList[0].event_id);
-console.log("放送開始時間: " + programList[0].start_time);
-console.log("放送終了時間: " + programList[0].end_time);
-console.log("放送エリア: " + programList[0].area.name);
-console.log("サービス名: " + programList[0].service.name);
+console.log("検索結果の1件目");
+console.log("開始時刻: " + programList[0].start_time);
+console.log("終了時刻: " + programList[0].end_time);
+console.log("チャンネル: " + programList[0].service.name);
 console.log("タイトル: " + programList[0].title);
 console.log("サブタイトル: " + programList[0].subtitle);
-console.log("内容: " + programList[0].content);
-console.log("出演者/アクター: " + programList[0].act);
-console.log("ジャンル: " + programList[0].genres.join(', '));
+console.log("番組説明: " + programList[0].content);
+console.log("出演者: " + programList[0].act + "記載なし");
 
-console.log("番組 2:");
-console.log("番組ID: " + programList[1].id);
-console.log("イベントID: " + programList[1].event_id);
-console.log("放送開始時間: " + programList[1].start_time);
-console.log("放送終了時間: " + programList[1].end_time);
-console.log("放送エリア: " + programList[1].area.name);
-console.log("サービス名: " + programList[1].service.name);
+console.log("検索結果の2件目");
+console.log("開始時刻: " + programList[1].start_time);
+console.log("終了時刻: " + programList[1].end_time);
+console.log("チャンネル: " + programList[1].service.name);
 console.log("タイトル: " + programList[1].title);
 console.log("サブタイトル: " + programList[1].subtitle);
-console.log("内容: " + programList[1].content);
-console.log("出演者/アクター: " + programList[1].act);
-console.log("ジャンル: " + programList[1].genres);
+console.log("番組説明: " + programList[1].content);
+console.log("出演者: " + programList[1].act + "記載なし");
+
+// 番組情報を表示するdiv要素を取得
+let resultDiv = document.querySelector('div#result');
+
+// HTMLコンテンツを格納する変数を初期化
+let htmlContent = '';
+
+
+// 検索結果をdiv#resultに表示
+htmlContent += `
+  <li>NHK の番組表（検索結果は2件)</li>
+  <dl>
+    <dt><li>検索結果の1件目</li></dt>
+    <dd><li>開始時刻: ${programList[0].start_time}</li></dd>
+    <dd><li>終了時刻: ${programList[0].end_time}</li></dd>
+    <dd><li>チャンネル: ${programList[0].service.name}</li></dd>
+    <dd><li>タイトル: ${programList[0].title}</li></dd>
+    <dd><li>サブタイトル: ${programList[0].subtitle}</li></dd>
+    <dd><li>番組説明: ${programList[0].content}</li></dd>
+    <dd><li>出演者: ${programList[0].act} 記載なし</li></dd>
+
+    <dt><li>検索結果の2件目</li></dt>
+    <dd><li>開始時刻: ${programList[1].start_time}</li></dd>
+    <dd><li>終了時刻: ${programList[1].end_time}</li></dd>
+    <dd><li>チャンネル: ${programList[1].service.name}</li></dd>
+    <dd><li>タイトル: ${programList[1].title}</li></dd>
+    <dd><li>サブタイトル: ${programList[1].subtitle}</li></dd>
+    <dd><li>番組説明: ${programList[1].content}</li></dd>
+    <dd><li>出演者: ${programList[1].act} 記載なし</li></dd>
+  </dl>`;
+
+// 結果をHTMLに挿入
+resultDiv.innerHTML = htmlContent;
+

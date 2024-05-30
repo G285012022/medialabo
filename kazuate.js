@@ -59,3 +59,4 @@ if (yoso === kotae) {
 console.log(mes);
 res.textContent = mes;
 }
+

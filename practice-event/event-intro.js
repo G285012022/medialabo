@@ -2,15 +2,15 @@
 // 1. イベントハンドラの登録
 
 let b1 = document.querySelector('button#blue');
-b1.addEventListener('click', changeH1ColorRed);
+b1.addEventListener('click', changeH1Colorblue);// ここでイベントハンドラを登録
 
 //// 以下，練習5-2 でコードを追加
-
-
+let b2 = document.querySelector('button#random');	
+b2.addEventListener('click', changeBackgroundColorRandom);
 ////////////////////////////////////////////////////////
 // 2. イベントハンドラ（イベントが発生したら実行する関数）
 
-function changeH1ColorRed() {
+function changeH1Colorblue() {
 	// 見出し h1 要素を検索
 	let h1 = document.querySelector('h1');
 
@@ -29,4 +29,4 @@ function changeBackgroundColorRandom() {
 	let body = document.querySelector('body');
 	body.style.backgroundColor = color;
 }
-
+ 
