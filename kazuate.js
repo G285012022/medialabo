@@ -2,27 +2,34 @@ let kotae = Math.floor(Math.random()*10) + 1;
 console.log('答え（デバッグ用）: ' + kotae);
 
 // 入力回数（予想回数）
-let kaisu = 0;
+let kaisu = 1;
 
 
 // 予想を4回実行する
 // 将来以下の hantei(); の4回の呼び出しを全て削除する
 // 代わりにここでは，ボタンを押したら hantei() を呼び出すイベント処理をする
-hantei();
+
+let b = document.querySelector('#print');     // 1. 回答ボタンのクリックイベントハンドラとして hantei を登録
+b.addEventListener('click', hantei);
 
 
 
 
 
-let spn = document.querySelector('span#kaisu');       //span#kaisu要素を検索
-spn.textContent = kaisu;                              // 要素のテキストを設定
+
+
 
 
 
 // ボタンを押した後の処理をする関数 hantei() の定義
 function hantei() {
+    let spn = document.querySelector('span#kaisu');       //span#kaisu要素を検索
+    spn.textContent = kaisu;                              // 要素のテキストを設定
+
   // 将来ここでは 4 ではなくテキストボックスに指定された数値を yoso に代入する
-  let yoso = 4;
+  let i = document.querySelector('input[name="kazu"]');
+  let kazu = parseInt(i.value);
+  let yoso = kazu;
 
   let ans = document.querySelector('span#answer');
   ans.textContent = yoso;
@@ -35,14 +42,14 @@ function hantei() {
   
   let res = document.querySelector('p#result'); // p#result 要素を検索
   let mes = '';
-
-if (yoso === kotae) {
+  if (yoso === kotae) {
     if (kaisu === 1) {
         mes = '正解です！おめでとう！';
     } else {
         mes = '答えは ' + kotae + ' でした．すでにゲームは終わっています';
     }
-} else {
+  }
+  else {
     if (kaisu === 3) {
         mes = 'まちがい．残念でした答えは ' + kotae + ' です．';
     } else if (kaisu >= 4) {
