@@ -1,6 +1,6 @@
 body {
     /* 画像ファイルの指定 */
-    background-image: url(19bc45b10ec292e743fd8075d4558374_t.jpeg);
+    background-image: url(rice_frame_10701.jpg);
      
     /* 画像を常に天地左右の中央に配置 */
     background-position: center center;
@@ -19,4 +19,10 @@ body {
 }
 li{
     font-weight :bold;
+}
+h1{
+    text-align: center;
+}
+p1{
+    text-align: center;
 }

@@ -1,16 +1,65 @@
 <!DOCTYPE html>
+
+
 <html>
   <head>
     <meta charset="utf-8">
     <title>My test page</title>
     <link rel="Stylesheet" href="./project.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
     <script src="project.js" defer></script>
   </head>
+
+
   <body>
     <h1>グルメの検索結果</h1>
+    <p id = "name"></p>
     <label for="shimei">検索キー: </label>
-    <input type="search" name="shimei" id="shimei" size="10">
-    <button id="print">検索</button>
-    <div id="result"></div>
+    <select id = "guru" name = "guru">
+      <option value = ""></option>
+      <option value = "G001">居酒屋</option>
+      <option value = "G002">ダイニングバー・バル</option>
+      <option value = "G003">創作料理</option>
+      <option value = "G004">和食</option>
+      <option value = "G005">洋食</option>
+      <option value = "G006">イタリアン・フレンチ</option>
+      <option value = "G007">中華</option>
+      <option value = "G008">焼肉・ホルモン</option>
+      <option value = "G009">アジア・エスニック料理</option>
+      <option value = "G010">各国料理</option>
+      <option value = "G011">カラオケ・パーティ</option>
+      <option value = "G012">バー・カクテル</option>
+      <option value = "G013">ラーメン</option>
+      <option value = "G014">カフェ・スイーツ</option>
+      <option value = "G015">その他グルメ</option>
+      <option value = "G016">お好み焼き・もんじゃ</option>
+      <option value = "G017">韓国料理</option>
+
+
+    </select>
+    <button id = "do">検索</button>
+    <center>
+      <ul>ここに表示</ul>
+    <h3>アクセス情報</h3>
+    <ul id = "gu1"></ul>
+    <h3>住所</h3>
+    <ul id = "gu2"></ul>
+    <h3>予算</h3>
+    <ul id = "gu3"></ul>
+    <h3>キャッチコピー</h3>
+    <ul id = "gu4"></ul>
+    <h3>ジャンル</h3>
+    <ul id = "gu5"></ul>
+    <h3>店舗名</h3>
+    <ul id = "gu6"></ul>
+    <h3>営業日時</h3>
+    <ul id = "gu7"></ul>
+    <h3>最寄駅</h3>
+    <ul id = "gu8"></ul>
+    <h3>サブジャンルの名前</h3>
+    <ul id = "gu9"></ul>
+    </center>
+
   </body>
 </html>
+
