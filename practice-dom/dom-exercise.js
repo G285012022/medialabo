@@ -26,26 +26,31 @@ p.style.textEmphasis = 'sesame green';
 
 
 
+
 // 練習4-3 写真表作成プログラム
-let phototable = document.querySelector('div#phototable');
+let div=document.querySelector('div#phototable');
+let p2 = document.createElement('p'); 
+let img = document.createElement('img'); 
+img.setAttribute('src', 'taro.png');
+p2.insertAdjacentElement('beforeend', img);
+div.insertAdjacentElement('beforeend', p2);
 
-let imgtaro = document.createElement('img');        //img要素を作成
-imgtaro.setAttribute('src', 'taro.png');            //img要素のsrc属性を設定
-let p1 = document.createElement('p');               //p要素を作成                               
-p1.insertAdjacentElement('beforeend', imgtaro);     //p要素の中の最後に img 要素を追加
-phototable.insertAdjacentElement('beforeend', p1);  //div#phototable の中の最後に p 要素を追加
+let div2=document.querySelector('div#phototable');
+let p3 = document.createElement('p'); 
+let img2 = document.createElement('img'); 
+img2.setAttribute('src', 'jiro.png');
+p3.insertAdjacentElement('beforeend', img2);
+div2.insertAdjacentElement('beforeend', p3);
 
-let imgjiro = document.createElement('img');        //img要素を作成
-imgjiro.setAttribute('src', 'jiro.png');            //img要素のsrc属性を設定
-let p2 = document.createElement('p');               //p要素を作成                               
-p2.insertAdjacentElement('beforeend', imgjiro);     //p要素の中の最後に img 要素を追加
-phototable.insertAdjacentElement('beforeend', p2);  //div#phototable の中の最後に p 要素を追加
+let div3=document.querySelector('div#phototable');
+let p4 = document.createElement('p'); 
+let img3 = document.createElement('img'); 
+img3.setAttribute('src', 'hanako.png');
+p4.insertAdjacentElement('beforeend', img3);
+div3.insertAdjacentElement('beforeend', p4);
 
-let imghanako = document.createElement('img');      //img要素を作成
-imghanako.setAttribute('src', 'hanako.png');        //img要素のsrc属性を設定
-let p3 = document.createElement('p');               //p要素を作成                               
-p3.insertAdjacentElement('beforeend', imghanako);   //p要素の中の最後に img 要素を追加
-phototable.insertAdjacentElement('beforeend', p3);  //div#phototable の中の最後に p 要素を追加
+
+
 
 
 // 練習4-4 箇条書き削除プログラム

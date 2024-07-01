@@ -42,12 +42,16 @@ function hantei() {
   
   let res = document.querySelector('p#result'); // p#result 要素を検索
   let mes = '';
-  if (yoso === kotae) {
+  if(yoso === kotae){
+    mes = '正解です！おめでとう！';
+  }
+  else if (yoso === kotae) {
     if (kaisu === 1) {
         mes = '正解です！おめでとう！';
-    } else {
-        mes = '答えは ' + kotae + ' でした．すでにゲームは終わっています';
     }
+    else {
+        mes = '答えは ' + kotae + ' でした．すでにゲームは終わっています';
+    } 
   }
   else {
     if (kaisu === 3) {
